@@ -1,0 +1,4 @@
+currency:
+  rates:
+    service:
+      url: http://localhost:4545
