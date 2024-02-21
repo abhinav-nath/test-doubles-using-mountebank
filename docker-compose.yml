@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mountebank:
+    image: bbyars/mountebank
+    container_name: mountebank
+    ports:
+      - "2525:2525" # Mountebank's default port
+      - "4545:4545" # An example mock service port
+    command: --configfile /imposters/imposters.ejs --allowInjection
+    volumes:
+      - ./imposters:/imposters
