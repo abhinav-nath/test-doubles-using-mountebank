@@ -1,0 +1,33 @@
+{
+  "imposters": [
+    {
+      "port": 4545,
+      "protocol": "http",
+      "stubs": [
+        {
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": "82.92"
+              }
+            }
+          ],
+          "predicates": [
+            {
+              "equals": {
+                "path": "/rates",
+                "method": "GET",
+                "query": {
+                  "from": "USD",
+                  "to": "INR"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
